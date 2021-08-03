@@ -3,13 +3,28 @@
 
 <head>
     <title> Count</title>
-    <script src="hello.js"></script>
+    <!-- <script src="hello.js"></script>-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelector("form").onsubmit = function () {
+                const name = document.querySelector("#name").value;
+                alert(`Hello, ${name}!`);
+            };
+
+        });
+
+    </script>
 </head> 
 <body>
     <h1>Hello! Min bror</h1>
     <h3>0</h3>
-   <!-- <button onclick="setName()">Change title</button>-->
-    <button>Count</button>
+    <!-- <button onclick="setName()">Change title</button>-->
+    <!--  <button>Count</button>-->
+    <form>
+        <input autofocus id="name" placeholder="Name" type="text" />
+        <input type="submit" />
+    </form>
 </body>
 
 </html>
